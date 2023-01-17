@@ -20,7 +20,6 @@ import { PricingSection } from './sections/pricing-section';
 import { ProductShippingSection } from './sections/product-shipping-section';
 import { ProductVariationsSection } from './sections/product-variations-section';
 import { validate } from './product-validation';
-import { AttributesSection } from './sections/attributes-section';
 import { OptionsSection } from './sections/options-section';
 import { ProductFormFooter } from './layout/product-form-footer';
 import { ProductFormTab } from './product-form-tab';
@@ -51,7 +50,6 @@ export const ProductForm: React.FC< {
 			<ProductFormLayout>
 				<ProductFormTab name="general" title="General">
 					<WooProductSectionItem.Slot location={ TAB_GENERAL_ID } />
-					<AttributesSection />
 				</ProductFormTab>
 				<ProductFormTab
 					name="pricing"

@@ -16,7 +16,6 @@ import { PluginArea } from '@wordpress/plugins';
 import { ProductFormHeader } from './layout/product-form-header';
 import { ProductFormLayout } from './layout/product-form-layout';
 import { ProductInventorySection } from './sections/product-inventory-section';
-import { PricingSection } from './sections/pricing-section';
 import { ProductShippingSection } from './sections/product-shipping-section';
 import { ProductVariationsSection } from './sections/product-variations-section';
 import { validate } from './product-validation';
@@ -24,7 +23,7 @@ import { AttributesSection } from './sections/attributes-section';
 import { OptionsSection } from './sections/options-section';
 import { ProductFormFooter } from './layout/product-form-footer';
 import { ProductFormTab } from './product-form-tab';
-import { TAB_GENERAL_ID } from './fills/constants';
+import { TAB_GENERAL_ID, TAB_PRICING_ID } from './fills/constants';
 
 import './fills';
 
@@ -58,7 +57,7 @@ export const ProductForm: React.FC< {
 					title="Pricing"
 					disabled={ !! product?.variations?.length }
 				>
-					<PricingSection />
+					<WooProductSectionItem.Slot location={ TAB_PRICING_ID } />
 				</ProductFormTab>
 				<ProductFormTab
 					name="inventory"
